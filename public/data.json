@@ -14,9 +14,7 @@
                 "current": 103,
                 "previous": 128
             }
-        },
-        "icon": "/images/icon-work.svg",
-        "bg": "bg-lightred_work"
+        }
     },
     {
         "title": "Play",
@@ -33,9 +31,7 @@
                 "current": 23,
                 "previous": 29
             }
-        },
-        "icon": "/images/icon-pla.svg",
-        "bg": "bg-softblue"
+        }
     },
     {
         "title": "Study",

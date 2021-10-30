@@ -6,3 +6,8 @@ body {
     background: hsl(226, 43%, 10%);
     font-family: "Rubik", sans-serif;
 }
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
