@@ -19,61 +19,78 @@ export default function Home({ data }) {
                     href="./images/favicon-32x32.png"
                 />
             </Head>
-            <main className="w-[90%] max-w-screen-lg mx-auto flex flex-col gap-8 lg:flex-row justify-center mt-[5vh] lg:mt-[20vh] mb-[5vh]">
-                <div className="min-w-[260px] h-full">
-                    <ProfileCard
-                        selectedOpt={selectedOpt}
-                        setSelectedOpt={setSelectedOpt}
-                    />
-                </div>
-
-                <section className="grid gap-4 w-full  lg:grid-cols-3">
-                    {data.map((d, i) => (
-                        <StatsCard
-                            key={i}
-                            title={d.title}
-                            prev={
-                                (selectedOpt === "daily" && "Last Day") ||
-                                (selectedOpt === "weekly" && "Last Week") ||
-                                (selectedOpt === "monthly" && "Last Month")
-                            }
-                            timeframe={
-                                (selectedOpt === "daily" &&
-                                    d.timeframes.daily) ||
-                                (selectedOpt === "weekly" &&
-                                    d.timeframes.weekly) ||
-                                (selectedOpt === "monthly" &&
-                                    d.timeframes.monthly)
-                            }
-                            bgProp={
-                                (d.title === "Work" && {
-                                    icon: "/images/icon-work.svg",
-                                    bg: "bg-lightred_work",
-                                }) ||
-                                (d.title === "Play" && {
-                                    icon: "/images/icon-play.svg",
-                                    bg: "bg-softblue",
-                                }) ||
-                                (d.title === "Study" && {
-                                    icon: "/images/icon-study.svg",
-                                    bg: "bg-lightred_study",
-                                }) ||
-                                (d.title === "Exercise" && {
-                                    icon: "/images/icon-exercise.svg",
-                                    bg: "bg-limegreen",
-                                }) ||
-                                (d.title === "Social" && {
-                                    icon: "/images/icon-social.svg",
-                                    bg: "bg-violet",
-                                }) ||
-                                (d.title === "Self Care" && {
-                                    icon: "/images/icon-self-care.svg",
-                                    bg: "bg-softorange",
-                                })
-                            }
+            <main className="flex flex-col justify-between min-h-screen">
+                <div className="w-[90%] max-w-screen-lg mx-auto flex flex-col gap-8 lg:flex-row justify-center mt-[5vh] lg:mt-[20vh] mb-[5vh]">
+                    <div className="min-w-[260px] h-full">
+                        <ProfileCard
+                            selectedOpt={selectedOpt}
+                            setSelectedOpt={setSelectedOpt}
                         />
-                    ))}
-                </section>
+                    </div>
+
+                    <section className="grid gap-4 w-full  lg:grid-cols-3 body-min">
+                        {data.map((d, i) => (
+                            <StatsCard
+                                key={i}
+                                title={d.title}
+                                prev={
+                                    (selectedOpt === "daily" && "Last Day") ||
+                                    (selectedOpt === "weekly" && "Last Week") ||
+                                    (selectedOpt === "monthly" && "Last Month")
+                                }
+                                timeframe={
+                                    (selectedOpt === "daily" &&
+                                        d.timeframes.daily) ||
+                                    (selectedOpt === "weekly" &&
+                                        d.timeframes.weekly) ||
+                                    (selectedOpt === "monthly" &&
+                                        d.timeframes.monthly)
+                                }
+                                bgProp={
+                                    (d.title === "Work" && {
+                                        icon: "/images/icon-work.svg",
+                                        bg: "bg-lightred_work",
+                                    }) ||
+                                    (d.title === "Play" && {
+                                        icon: "/images/icon-play.svg",
+                                        bg: "bg-softblue",
+                                    }) ||
+                                    (d.title === "Study" && {
+                                        icon: "/images/icon-study.svg",
+                                        bg: "bg-lightred_study",
+                                    }) ||
+                                    (d.title === "Exercise" && {
+                                        icon: "/images/icon-exercise.svg",
+                                        bg: "bg-limegreen",
+                                    }) ||
+                                    (d.title === "Social" && {
+                                        icon: "/images/icon-social.svg",
+                                        bg: "bg-violet",
+                                    }) ||
+                                    (d.title === "Self Care" && {
+                                        icon: "/images/icon-self-care.svg",
+                                        bg: "bg-softorange",
+                                    })
+                                }
+                            />
+                        ))}
+                    </section>
+                </div>
+                <div class="h-20 flex justify-center items-center space-x-1 text-paleblue opacity-80 text-xs">
+                    <span>Challenge by </span>
+                    <a
+                        href="https://www.frontendmentor.io?ref=challenge"
+                        target="_blank"
+                        className="text-violet "
+                    >
+                        Frontend Mentor
+                    </a>
+                    .<span>Coded by</span>
+                    <a href="#" className="text-violet">
+                        Rhythm Saha
+                    </a>
+                    .
+                </div>
             </main>
         </>
     );
