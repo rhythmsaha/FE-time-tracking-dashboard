@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
+-   Solution URL: [https://www.frontendmentor.io/solutions/time-tracking-dashboard-Q0wHkxVOH](https://www.frontendmentor.io/solutions/time-tracking-dashboard-Q0wHkxVOH)
 -   Live Site URL: [https://time-tracking-dashboard-vert.vercel.app/](https://time-tracking-dashboard-vert.vercel.app/)
 
 ## My process
