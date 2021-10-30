@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background: hsl(226, 43%, 10%);
+    font-family: "Rubik", sans-serif;
+}
